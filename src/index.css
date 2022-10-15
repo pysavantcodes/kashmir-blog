@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+.container {
+    margin-top: 9rem;
+}
+
+.container-fluid {
+    margin-top: 13.5rem;
+}
+
+.input-group {
+    padding: .7rem;
+    outline: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.171);
+    color: white;
+    display: none;
+}
+
+.navi li {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 1px .5rem;
+}
+
+.navi li:active {
+    background-color: white;
+    color: black;
+}
+
+.navi li p {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.splash p {
+    font-weight: 700;
+    font-size: 25px;
+    color: white;
+}
+
+.div {
+    animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+    2%,
+    64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+    4%,
+    60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+.div:before,
+.div:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+.div:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+    2%,
+    64% {
+        transform: translate(2px, -2px);
+    }
+    4%,
+    60% {
+        transform: translate(-2px, 2px);
+    }
+    62% {
+        transform: translate(13px, -1px) skew(-13deg);
+    }
+}
+
+.div:after {
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+    2%,
+    64% {
+        transform: translate(-2px, 0);
+    }
+    4%,
+    60% {
+        transform: translate(-2px, 0);
+    }
+    62% {
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+}
+
+select {
+    width: 100%;
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    outline: none;
+    border: 1px solid rgb(190, 190, 190);
+}
