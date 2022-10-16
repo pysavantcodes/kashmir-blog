@@ -23,7 +23,8 @@ const Navbar = () => {
     justifyContent:"space-between",
     marginBottom:"0px",
     paddingTop:"1rem",
-    
+    paddingLeft:"1rem",
+    paddingRight:"1rem"
 
   }
 
